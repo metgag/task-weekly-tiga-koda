@@ -285,3 +285,36 @@ button:not([disabled]):hover {
         font-size: 12px;
     }
 } */
+
+@media screen and (max-width: 768px) {
+    header nav {
+        padding: 1rem 1.5rem;
+        gap: 0;
+    }
+
+    section {
+        margin-inline: 0;
+    }
+
+    footer {
+        padding-inline: 2.5rem;
+        margin-inline: 0;
+        .top {
+            flex-direction: column;
+            gap: 3rem;
+
+            .explore, .sponsor {
+                .link, .spons-img {
+                    flex-direction: row;
+
+                }
+            }
+            .social {
+                flex-direction: row;
+            }
+        }
+        .bottom {
+            align-self: flex-start;
+        }
+    }
+}

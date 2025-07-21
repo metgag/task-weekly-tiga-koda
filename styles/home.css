@@ -123,7 +123,9 @@ section#watch-today {
         text-align: center;
     }
 
-    h4 { color: var(--blue); }
+    h4 {
+        color: var(--blue);
+    }
 
     .movies {
         width: inherit;
@@ -149,6 +151,7 @@ section#watch-today {
                 display: none;
             }
         }
+
         .item-8:hover {
             a {
                 display: block;
@@ -274,7 +277,7 @@ section#coming-soon {
                 color: #14142B;
             }
 
-            > p {
+            >p {
                 color: var(--blue);
                 font-weight: 700;
                 font-size: 14px;
@@ -408,5 +411,54 @@ section#event {
             color: white;
             cursor: pointer;
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section#hero {
+        margin-inline: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    section#choose {
+        padding-inline: 2rem;
+
+        #point {
+            margin-inline: 0;
+            flex-direction: column;
+
+            >div {
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+
+    section#watch-today,
+    section#coming-soon {
+        padding-inline: 2rem;
+
+        .movies {
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    section#newsletter {
+        align-self: center;
+        text-align: center;
+        width: 90%;
+        padding-inline: 6rem;
+
+        form {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    section:not(#hero-bg) {
+        margin-inline: 0;
     }
 }
