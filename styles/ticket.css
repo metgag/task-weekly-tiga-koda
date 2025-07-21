@@ -113,6 +113,10 @@ main {
                 border-radius: 3px;
                 font-weight: 500;
                 width: calc(100% + 2.75rem);
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
             }
 
             button:nth-child(1) {
