@@ -40,8 +40,12 @@ form {
         border: none;
         border-radius: 2px;
         padding: 8px 0;
-        color: #F7F7FC;
         font-weight: 700;
+        
+        a {
+            color: #F7F7FC;
+            text-decoration: none;
+        }
     }
 }
 
