@@ -1,0 +1,73 @@
+<!-- pg. 2 -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pg. 2">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+    </style>
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/login.css">
+    <title>Login Form</title>
+</head>
+
+<body class="font-primary">
+    <div class="bg-avenger"></div>
+    <div class="d-flex justify-center">
+        <div class="logo">
+            <img src="/assets/images/tickitz-logo.png" width="192" alt="">
+        </div>
+    </div>
+
+    <main class="d-flex justify-center">
+        <section class="card d-flex flex-col align-center">
+            <div class="welcome">
+                <h3>Welcome Back👋</h3>
+                <p class="gray-tertiary fs-md">Sign in with your data that you
+                    entered during
+                    your registration</p>
+            </div>
+            <div id="input">
+                <form class="d-flex flex-col justify-center">
+                    <div class="d-flex flex-col">
+                        <label class="gray-primary"
+                            for="email">Email</label><br>
+                        <input type="email" name="" id="email"
+                            placeholder="Enter your email">
+                    </div>
+                    <div class="d-flex flex-col">
+                        <label class="gray-primary"
+                            for="password">Password</label><br>
+                        <input type="email" name="" id="password"
+                            placeholder="Enter your password">
+                    </div>
+                    <button class="font-primary" type="submit">Login</button>
+                    <div class="forgot-pw"><a href=""
+                            class="fs-sm font-secondary color-blue">Forgot your
+                            password?</a>
+                    </div>
+                    <div id="or" class="d-flex flex-row">
+                        <!-- <div class="x-line"></div> -->
+                        <p class="font-secondary">Or</p>
+                        <!-- <div class="x-line"></div> -->
+                    </div>
+                </form>
+            </div>
+            <div id="social" class="d-flex flex-row">
+                <button class="d-flex flex-row align-center pointer" href="">
+                    <img src="/assets/images/icon/google.svg" alt="">
+                    <p>Google</p>
+                </button>
+                <button class=" d-flex flex-row align-center pointer" href="">
+                    <img src="/assets/images/icon/fb.png" />
+                    <p>Facebook</p>
+                </button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
