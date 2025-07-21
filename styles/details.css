@@ -1,3 +1,12 @@
+main {
+    padding-inline: 0;
+    gap: 2.5rem;
+}
+
+section:not(#hero) {
+    padding-inline: 8rem;
+}
+
 h2,
 h4 {
     font-weight: 600;
@@ -29,6 +38,7 @@ section#mov-detail {
         display: flex;
         align-items: flex-end;
         gap: 20px;
+        /* margin-top: 2.5rem; */
 
         img {
             border-radius: 6px;
@@ -36,7 +46,6 @@ section#mov-detail {
 
         .right-items {
             .genre {
-                transform: translateY(-12px);
                 gap: 8px;
             }
 
@@ -51,6 +60,13 @@ section#mov-detail {
         .right-items .grid-child {
             display: grid;
             grid-template-columns: repeat(6, 1fr);
+            gap: 8px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
 
             .director,
             .casts {
@@ -81,14 +97,13 @@ section#mov-detail {
 }
 
 section#book {
-    gap: 28px;
+    gap: 1.25rem;
 
     .grid-cont {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 12px;
-        padding-inline: 4px;
 
         select,
         button {
@@ -193,4 +208,59 @@ section#book {
 footer {
     margin-top: 0;
     padding-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+    section#hero {
+        #sman-bg {
+            height: 64vh;
+        }
+    }
+
+    section:not(#hero) {
+        padding-inline: 1.5rem;
+        transform: translateY(-260px);
+    }
+
+    section#mov-detail {
+        gap: 1.25rem;
+        .homecoming {
+            flex-direction: column;
+
+            img {
+                width: 100%;
+            }
+
+            .right-items {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 1.25rem;
+                h2 {
+                    margin: 0;
+                    align-self: center;
+                }
+                .genre {
+                    align-self: center;
+                }
+
+                .grid-child {
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+
+                    .director,
+                    .casts {
+                        padding: 0;
+                    }
+
+                    >div {
+                    }
+                }
+            }
+        }
+
+        .synopsis {
+            width: 100%;
+        }
+    }
 }

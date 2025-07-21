@@ -166,6 +166,7 @@ header nav {
             color: white;
         }
     }
+
     .burger {
         display: none;
     }
@@ -313,16 +314,20 @@ button:not([disabled]):hover {
 
     header nav {
         gap: 0;
+
         .center {
             a {
                 display: none;
             }
         }
+
         .account {
             display: none;
         }
+
         .burger {
             display: block;
+
             &:hover {
                 cursor: pointer;
                 opacity: .6;
@@ -340,6 +345,12 @@ button:not([disabled]):hover {
         .top {
             flex-direction: column;
             gap: 3rem;
+
+            .explore {
+                .link {
+                    gap: 2.5rem;
+                }
+            }
 
             .explore,
             .sponsor {
@@ -370,12 +381,15 @@ button:not([disabled]):hover {
         .top .follow .social a:nth-child(1)::after {
             content: "";
         }
+
         .top .follow .social a:nth-child(2)::after {
             content: "";
         }
+
         .top .follow .social a:nth-child(3)::after {
             content: "";
         }
+
         .top .follow .social a:nth-child(4)::after {
             content: "";
         }
