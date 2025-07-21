@@ -16,6 +16,10 @@
     --gray-50: #F8FAFC;
 }
 
+body {
+    margin: 0 auto;
+}
+
 .d-grid {
     display: grid;
 }
@@ -117,6 +121,7 @@
 }
 
 header {
+    padding: .5rem 8rem;
     position: sticky;
     top: 0;
     border-bottom: 1px solid #DEDEDE;
@@ -124,14 +129,15 @@ header {
     background-color: white;
 }
 
+main {
+    padding-inline: 8rem;
+}
+
 header nav {
-    padding-inline: 116px;
     justify-content: space-between;
-    padding-block: 6px;
-    gap: 144px;
 
     .center {
-        gap: 42px;
+        gap: 3.5rem;
 
         a {
             color: #0F172A;
@@ -140,13 +146,14 @@ header nav {
 
     .account button {
         border: none;
-        padding: 10px 16px;
         border-radius: 4px;
+        padding: .625rem .75rem;
     }
 
     .account button:nth-child(1) {
         border: 1px solid var(--blue);
         background-color: transparent;
+
         a {
             color: var(--blue);
             text-decoration: none;
@@ -159,25 +166,22 @@ header nav {
             color: white;
         }
     }
-}
-
-section {
-    padding-block: 32px;
-    margin-inline: 116px;
+    .burger {
+        display: none;
+    }
 }
 
 footer {
+    padding-inline: 8rem;
+    padding-bottom: 1.5rem;
+    margin-top: 8rem;
     gap: 32px;
-    padding-inline-end: 36px;
-    margin-top: 78px;
-    padding-block: 24px;
-    margin-inline: 116px;
 
     .top {
         justify-content: space-between;
 
         h4 {
-            margin-bottom: 24px;
+            margin-bottom: 1.5rem;
         }
 
         .foo-logo p {
@@ -189,7 +193,7 @@ footer {
 
             .link,
             .social {
-                gap: 8px;
+                gap: .625rem;
 
                 a {
                     color: var(--gray-primary);
@@ -207,6 +211,22 @@ footer {
             img {
                 width: 14%;
             }
+        }
+
+        .follow .social a:nth-child(1)::after {
+            content: "Tickitz Cinema id";
+        }
+
+        .follow .social a:nth-child(2)::after {
+            content: "tickitz.id";
+        }
+
+        .follow .social a:nth-child(3)::after {
+            content: "tickitz.id";
+        }
+
+        .follow .social a:nth-child(4)::after {
+            content: "Tickitz Cinema id";
         }
 
         .spons-img {
@@ -287,34 +307,77 @@ button:not([disabled]):hover {
 } */
 
 @media screen and (max-width: 768px) {
-    header nav {
-        padding: 1rem 1.5rem;
-        gap: 0;
+    header {
+        padding-inline: 1.5rem;
     }
 
-    section {
-        margin-inline: 0;
+    header nav {
+        gap: 0;
+        .center {
+            a {
+                display: none;
+            }
+        }
+        .account {
+            display: none;
+        }
+        .burger {
+            display: block;
+            &:hover {
+                cursor: pointer;
+                opacity: .6;
+            }
+        }
+    }
+
+    main {
+        padding-inline: 1.5rem;
     }
 
     footer {
-        padding-inline: 2.5rem;
-        margin-inline: 0;
+        padding-inline: 1.5rem;
+
         .top {
             flex-direction: column;
             gap: 3rem;
 
-            .explore, .sponsor {
-                .link, .spons-img {
+            .explore,
+            .sponsor {
+
+                .link,
+                .spons-img {
                     flex-direction: row;
 
                 }
             }
+
             .social {
                 flex-direction: row;
+
+                a {
+                    img {
+                        min-width: 24px;
+                    }
+                }
             }
+
         }
+
         .bottom {
             align-self: flex-start;
+        }
+
+        .top .follow .social a:nth-child(1)::after {
+            content: "";
+        }
+        .top .follow .social a:nth-child(2)::after {
+            content: "";
+        }
+        .top .follow .social a:nth-child(3)::after {
+            content: "";
+        }
+        .top .follow .social a:nth-child(4)::after {
+            content: "";
         }
     }
 }
