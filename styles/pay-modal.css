@@ -1,0 +1,84 @@
+.bg-gray {
+    background-color: #00000099;
+    height: 100vh;
+}
+
+.paym-info {
+    margin-block: 5rem;
+    background-color: white;
+    border-radius: 1rem;
+    width: 32rem;
+    padding: 1.5rem 1rem 3.5rem;
+    gap: 1.75rem;
+
+    h3 {
+        align-self: center;
+        color: #14142B;
+    }
+
+    .no-rek,
+    .total {
+        justify-content: space-between;
+
+        >p {
+            color: #8692A6;
+            font-size: .875rem;
+        }
+    }
+
+    .side {
+        gap: .875rem;
+
+        p {
+            font-weight: 700;
+            color: #14142B;
+        }
+
+        button {
+            border: 1px solid var(--blue);
+            border-radius: 4px;
+            background-color: transparent;
+            padding: .625rem;
+            color: var(--blue);
+        }
+    }
+
+    .total {
+        h4 {
+            color: var(--blue);
+        }
+    }
+
+    >p {
+        color: #8692A6;
+
+        span {
+            color: #D00707;
+        }
+    }
+
+    >button {
+        border: none;
+        background-color: var(--blue);
+        border-radius: 4px;
+        padding-block: .875rem;
+
+        a {
+            color: white;
+            width: 100%;
+            text-decoration: none;
+        }
+    }
+
+    > a {
+        text-decoration: none;
+        align-self: center;
+        color: var(--blue);
+    }
+
+    >button,
+    a {
+        font-weight: 600;
+        font-size: .875rem;
+    }
+}

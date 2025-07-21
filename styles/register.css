@@ -1,0 +1,112 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6)), url("/assets/images/avenger-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 42%;
+    height: 100vh;
+    font-size: 16px;
+    padding-top: 36px;
+}
+
+.card {
+    height: 432px;
+    background-color: white;
+    width: auto;
+    /* padding: 32px 42px; */
+    border-radius: 6px;
+    justify-content: space-around;
+    padding: .5rem 2rem 1rem;
+}
+
+.steps .step-1 .dot {
+    background-color: #1D4ED8;
+}
+
+form {
+    gap: 8px;
+    div {
+        width: inherit;
+    }
+
+    label:not(label[for="terms"]) {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    input:not(#terms) {
+        margin-top: 8px;
+        color: var(--gray-tertiary);
+        background-color: #FCFDFE;
+        border: 1px solid #DEDEDE;
+        height: 32px;
+        padding-left: 12px;
+    }
+
+    button {
+        background-color: #1D4ED8;
+        border: none;
+        border-radius: 2px;
+        padding: 8px 0;
+        color: #F7F7FC;
+        font-weight: 700;
+    }
+}
+
+input[type="checkbox"] {
+    margin-right: 12px;
+    accent-color: var(--blue);
+}
+
+label[for="terms"] {
+    letter-spacing: 0.75px;
+    font-size: 14px;
+    color: #696F79;
+}
+
+button.font-primary {
+    font-size: 12px;
+    letter-spacing: 0.45px;
+}
+
+#already {
+    font-weight: 500;
+    font-size: 12px;
+    color: #696F79;
+
+    a {
+        color: var(--blue);
+    }
+}
+
+#or {
+    justify-content: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #AAAAAA;
+
+    .x-line {
+        text-decoration: underline;
+    }
+}
+
+#social {
+    justify-content: space-between;
+
+    button {
+        border: none;
+        gap: 12px;
+        padding: 12px;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+        p {
+            color: #A0A3BD;
+            font-weight: 500;
+        }
+    }
+
+    img {
+        width: 20px;
+    }
+}

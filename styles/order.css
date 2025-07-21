@@ -1,0 +1,272 @@
+.bg-gray {
+    background-color: #A0A3BD33;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.steps {
+    margin-bottom: 2rem;
+
+    .step-1 .dot {
+        background-color: #008000;
+    }
+
+    .step-2 .dot {
+        background-color: var(--blue);
+    }
+
+    .step-3 .how {
+        color: #A0A3BD;
+    }
+}
+
+body>main {
+    padding: 2rem 0 7rem 0;
+}
+
+.flex-container {
+    gap: 1rem;
+
+    main {
+        gap: 1.75rem;
+
+        .movie-detail {
+            border: 1px solid #DEDEDE;
+            border-radius: 2px;
+            padding: 1rem;
+            gap: .75rem;
+
+            .sman-thumb {
+                height: 5rem;
+                width: 8rem;
+                background-image: url("/assets/images/thumbnail/thumb-spidermen.png");
+                background-size: cover;
+                border-radius: 2px;
+            }
+
+            .detail {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .genre {
+                    display: flex;
+                    gap: .5rem;
+
+                    p {
+                        background-color: #A0A3BD1A;
+                        color: #A0A3BD;
+                        padding: .125rem .75rem;
+                        border-radius: 1rem;
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+
+            .btn-change {
+                align-self: flex-end;
+                border: none;
+                padding: .375rem 1.25rem;
+                border-radius: 4px;
+                background-color: var(--blue);
+                color: white;
+            }
+        }
+
+        .seat {
+            h3 {
+                align-self: self-start;
+            }
+        }
+
+        .seat {
+            gap: 1.25rem;
+
+            >p {
+                font-size: .875rem;
+                align-self: center;
+            }
+
+            .seats {
+                width: 100%;
+                gap: 2rem;
+
+                .grid-seat-a,
+                .grid-seat-b {
+                    .seat {
+                        width: 1.25rem;
+                    }
+                }
+
+                .grid-seat-a {
+                    display: grid;
+                    grid-template-columns: repeat(8, 1fr);
+                    grid-gap: .5rem;
+
+                    .seat {
+                        accent-color: var(--blue);
+                    }
+
+                    .seat-num-1 {
+                        grid-column: 1 / 3;
+                        text-align: end;
+                        width: 100%;
+                    }
+
+                    .seat-6,
+                    .seat-9,
+                    .seat-10,
+                    .seat-23,
+                    .seat-32,
+                    .seat-45 {
+                        accent-color: #6E7191;
+                    }
+                }
+
+                .grid-seat-b {
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    grid-gap: .625rem;
+
+                    .seat-5,
+                    .seat-16,
+                    .seat-19,
+                    .seat-23,
+                    .seat-26,
+                    .seat-40 {
+                        accent-color: #6E7191;
+                    }
+
+                    .seat-38 {
+                        grid-column: 3 / 5;
+                        accent-color: #F589D7;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .seat-key {
+            h5 {
+                margin-bottom: 1rem;
+            }
+
+            .legend {
+                gap: 1.5rem;
+
+                .key {
+                    display: flex;
+                    gap: .625rem;
+
+                    .square {
+                        width: 1.25rem;
+                        height: 1.25rem;
+                        border-radius: 4px;
+                    }
+
+                    .square-1 {
+                        background-color: #FCFDFE;
+                    }
+
+                    .square-2 {
+                        background-color: var(--blue);
+                    }
+
+                    .square-3 {
+                        background-color: #F589D7;
+                    }
+
+                    .square-4 {
+                        background-color: #6E7191;
+                    }
+
+                    p {
+                        font-size: .875rem;
+                        color: #4E4B66;
+                    }
+                }
+            }
+        }
+    }
+
+    aside {
+        gap: 1.5rem;
+        height: min-content;
+
+        .cinema {
+            gap: 1.5rem;
+
+            .cinema-name {
+                gap: .75rem;
+            }
+
+            .details {
+                gap: .75rem;
+
+                .title,
+                .date,
+                .price,
+                .seat {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 1.5rem;
+
+                    p {
+                        font-size: .875rem;
+                    }
+
+                    p:nth-child(1) {
+                        color: #6B6B6B;
+                    }
+
+                    p:nth-child(2) {
+                        color: #14142B;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .total {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 1.25rem;
+                border-top: 1px solid #E6E6E6;
+
+                h3 {
+                    color: var(--blue);
+                }
+            }
+        }
+
+        button {
+            width: 100%;
+            padding-block: .625rem;
+            border: none;
+            background-color: var(--blue);
+            border-radius: 4px;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        button,
+        .cinema {
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    }
+
+    main,
+    .cinema {
+        background-color: white;
+        border-radius: 6px;
+        padding: 1.75rem 1rem;
+    }
+
+}

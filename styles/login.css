@@ -1,0 +1,103 @@
+body {
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/assets/images/avenger-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 42%;
+    height: 100vh;
+    font-size: 16px;
+    padding-top: 36px;
+}
+
+.card {
+    width: 340px;
+    height: 432px;
+    background-color: white;
+    padding: 32px 42px;
+    border-radius: 6px;
+    justify-content: space-between;
+}
+
+form {
+    gap: 8px;
+
+    label:not(label[for="terms"]) {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    input {
+        color: var(--gray-tertiary);
+        width: 240px;
+        margin-top: 8px;
+        background-color: #FCFDFE;
+        border: 1px solid #DEDEDE;
+        height: 32px;
+        padding-left: 12px;
+    }
+
+    button {
+        background-color: #1D4ED8;
+        border: none;
+        border-radius: 2px;
+        padding: 8px 0;
+        color: #F7F7FC;
+        font-weight: 700;
+    }
+}
+
+.forgot-pw {
+    text-align: right;
+}
+
+.forgot-pw a {
+    text-decoration: none;
+}
+
+button.font-primary {
+    font-size: 12px;
+    letter-spacing: 0.45px;
+}
+
+#already {
+    font-weight: 500;
+    font-size: 14px;
+
+    a {
+        color: var(--blue);
+    }
+}
+
+#or {
+    justify-content: center;
+    gap: 12px;
+    font-size: 12px;
+    color: #AAAAAA;
+
+    .x-line {
+        text-decoration: underline;
+        content: none;
+    }
+}
+
+#social {
+    width: 228px;
+    justify-content: space-between;
+
+    button {
+        border: none;
+        gap: 12px;
+        padding: 12px;
+        background-color: white;
+        border-radius: 4px;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+        p {
+            color: #A0A3BD;
+            font-weight: 500;
+        }
+    }
+
+    img {
+        width: 20px;
+    }
+}
