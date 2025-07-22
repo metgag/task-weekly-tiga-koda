@@ -169,3 +169,30 @@ body>main {
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    main {
+        .steps {
+            display: none;
+        }
+        .payment-card {
+            width: 93%;
+
+            .personal-info {
+                form {
+                    .pay-method {
+                        .grid-method {
+                            grid-template-columns: repeat(2, 1fr);
+                            .method {
+                                height: 12vh;
+                                img {
+                                    width: 24%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

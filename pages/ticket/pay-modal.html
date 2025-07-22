@@ -5,13 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="pg. 8">
+    <meta name="description" content="pg. 7">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
     </style>
     <link rel="stylesheet" href="/styles/global.css">
     <link rel="stylesheet" href="/styles/pay-modal.css">
-    <title>Payment Modal</title>
+    <title>Order Payment Page</title>
 </head>
 
 <body class="font-primary">
@@ -21,17 +21,125 @@
             </div>
             <div class="center d-flex fs-md">
                 <a class="decoration-none" href="../movie/index.html">Home</a>
-                <a class="decoration-none" href="../movie/home-dua.html">Movie</a>
-                <a class="decoration-none" href="../ticket/order.html">Buy Ticket</a>
+                <a class="decoration-none"
+                    href="../movie/home-dua.html">Movie</a>
+                <a class="decoration-none" href="../ticket/order.html">Buy
+                    Ticket</a>
             </div>
             <div class="account">
-                <button class="color-blue"><a href="../sign/login.html">SignIn</a></button>
-                <button class="bg-blue"><a href="../sign/register.html">Sign Up</a></button>
+                <button class="color-blue"><a
+                        href="../sign/login.html">SignIn</a></button>
+                <button class="bg-blue"><a href="../sign/register.html">Sign
+                        Up</a></button>
             </div>
         </nav>
     </header>
 
     <main class="bg-gray d-flex flex-col align-center">
+        <div class="steps d-flex align-center">
+            <div class="step step-1 d-flex flex-col align-center">
+                <div class="dot"><i class="nf nf-md-check"></i></div>
+                <p class="how">Dates And Time</p>
+            </div>
+            <div class="dash-line"><img src="/assets/images/dash-line.svg"
+                    alt=""></div>
+            <div class="step step-2 d-flex flex-col align-center">
+                <div class="dot">
+                    <p><i class="nf nf-md-check"></i></p>
+                </div>
+                <p class="how">Seat</p>
+            </div>
+            <div class="dash-line"><img src="/assets/images/dash-line.svg"
+                    alt=""></div>
+            <div class="step step-3 d-flex flex-col align-center">
+                <div class="dot">
+                    <p>3</p>
+                </div>
+                <p class="how">Payment</p>
+            </div>
+        </div>
+
+        <div class="payment-card d-flex flex-col">
+            <div class="pay-info d-flex flex-col">
+                <h3>Payment Info</h3>
+                <div class="output">
+                    <div class="date d-flex flex-col">
+                        <h5>DATE & TIME</h5>
+                        <p>Tuesday, 07 July 2020 at 02:00pm</p>
+                    </div>
+                    <div class="title d-flex flex-col">
+                        <h5>MOVIE TITLE</h5>
+                        <p>Spider-Man: Homecoming</p>
+                    </div>
+                    <div class="cinema d-flex flex-col">
+                        <h5>CINEMA NAME</h5>
+                        <p>CineOne21 Cinema</p>
+                    </div>
+                    <div class="tick-count d-flex flex-col">
+                        <h5>NUMBER OF TICKETS</h5>
+                        <p>3 pieces</p>
+                    </div>
+                    <div class="total d-flex flex-col">
+                        <h5>TOTAL PAYMENT</h5>
+                        <p>$30,00</p>
+                    </div>
+                </div>
+            </div>
+            <div class="personal-info d-flex flex-col">
+                <h3>Personal Information</h3>
+                <form action="">
+                    <div class="fname d-flex flex-col">
+                        <label for="fname">Full Name</label>
+                        <input value="Jonas El Rodriguez" type="text"
+                            id="fname">
+                    </div>
+                    <div class="email d-flex flex-col">
+                        <label for="email">Email</label>
+                        <input value="jonasrodri123@gmail.com" type="email"
+                            name="" id="email">
+                    </div>
+                    <div class="phone d-flex flex-col">
+                        <label for="phone">Phone Number</label>
+                        <!-- <div class="input-phone d-flex align-center">
+                            <p class="country-code gray-primary">+62</p> -->
+                        <input value="81445687121" type="text" name=""
+                            id="phone">
+                        <!-- </div> -->
+                    </div>
+                    <div class="pay-method d-flex flex-col">
+                        <h3>Payment Method</h3>
+                        <div class="grid-method">
+                            <div class="method"><img
+                                    src="/assets/images/payment-method/gpay.png"
+                                    alt=""></div>
+                            <div class="method"><img
+                                    src="/assets/images/payment-method/visa.png"
+                                    alt=""></div>
+                            <div class="method"><img
+                                    src="/assets/images/payment-method/gopay.png"
+                                    alt=""></div>
+                            <div class="method"><img
+                                    src="/assets/images/payment-method/paypal.png"
+                                    alt=""></div>
+                            <div class="method"><img
+                                    src="/assets/images/payment-method/dana.png"
+                                    alt=""></div>
+                            <div class="method"><img
+                                    src="/assets/images/payment-method/bca.png"
+                                    alt=""></div>
+                            <div class="method"><img
+                                    src="/assets/images/payment-method/bri.png"
+                                    alt=""></div>
+                            <div class="method"><img
+                                    src="/assets/images/payment-method/ovo.png"
+                                    alt=""></div>
+                        </div>
+                    </div>
+                    <button type="submit"><a href="pay-modal.html">Pay your
+                            order</a></button>
+                </form>
+            </div>
+        </div>
         <div class="paym-info d-flex flex-col">
             <h3>Payment Info</h3>
             <div class="no-rek d-flex align-center">
@@ -46,7 +154,8 @@
                 <h4>$30</h4>
             </div>
             <p>Pay this payment bill before it is due, <span>on June 23,
-                    2023</span>. If the bill has not been paid by the specified
+                    2023</span>. If the bill has not been paid by the
+                specified
                 time, it will be forfeited</p>
             <button>
                 <a href="ticket.html">Check Payment</a>

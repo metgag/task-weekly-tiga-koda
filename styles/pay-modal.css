@@ -1,13 +1,193 @@
 .bg-gray {
-    background-color: #00000099;
-    height: 100vh;
+    background-color: #A0A3BD33;
+}
+
+.steps {
+    margin-bottom: 2rem;
+
+    .step-1 .dot,
+    .step-2 .dot {
+        background-color: #008000;
+    }
+
+    .step-3 .dot {
+        background-color: var(--blue);
+    }
+
+}
+
+body>main {
+    padding: 2rem 0 7rem 0;
+}
+
+.payment-card {
+    width: 32rem;
+    background-color: white;
+    border-radius: 6px;
+    padding: 1.75rem;
+
+    .pay-info {
+        .output {
+            div {
+                border-bottom: 1px solid #E6E6E6;
+
+                h5 {
+                    color: #8692A6;
+                    font-size: .75rem;
+                }
+            }
+
+            div:last-child {
+                p {
+                    color: var(--blue);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .personal-info {
+        form {
+            >div {
+                label {
+                    color: #696F79;
+                    font-size: .875rem;
+                }
+
+                input {
+                    width: 100%;
+                    font-size: 1rem;
+                    padding: .75rem;
+                    border: 1px solid #DEDEDE;
+                    border-radius: 2px;
+                    color: #4E4B66;
+                }
+            }
+
+            button {
+                width: 100%;
+                background-color: var(--blue);
+                padding: .75rem;
+                border: none;
+                border-radius: 2px;
+                font-weight: 600;
+                a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+
+            .phone {
+                position: relative;
+
+                &::before {
+                    content: "+62";
+                    position: absolute;
+                    top: 0;
+                    transform: translate(-38px, 48px);
+                    padding-left: 60px;
+                    padding-right: 12px;
+                    border-right: 1px solid #DEDEDE;
+                    color: #4E4B66;
+                }
+
+                input {
+                    padding-left: 72px;
+                }
+            }
+
+            .pay-method {
+                .grid-method {
+                    display: grid;
+                    width: 100%;
+                    grid-gap: 1rem;
+                    grid-template-columns: repeat(4, 1fr);
+
+                    .method {
+                        width: 100%;
+                        height: 2rem;
+                        border: 1px solid #DEDEDE;
+                        border-radius: 4px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding-block: 1.25rem;
+
+                        img {
+                            width: 3.5rem;
+                        }
+
+                        &:hover {
+                            border: 1px solid var(--blue);
+                            cursor: pointer;
+                        }
+                    }
+
+                    .method:nth-child(4) img {
+                        width: 1rem;
+                    }
+
+                    .method:nth-child(7) img {
+                        width: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.payment-card {
+    .pay-info {
+        gap: 1rem;
+
+        .output {
+            div {
+                gap: .625rem;
+                padding-block: .5rem;
+            }
+        }
+    }
+
+    .personal-info {
+        gap: 1rem;
+        margin-top: 1.75rem;
+
+        form {
+            >div {
+                gap: .625rem;
+                padding-block: .5rem;
+            }
+
+            button {
+                margin-top: 1.75rem;
+            }
+        }
+
+        .pay-method {
+            gap: 1rem;
+            margin-top: 1.75rem;
+        }
+    }
+}
+
+main {
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.6));
+    div:not(.paym-info) {
+        filter: brightness(40%);
+    }
 }
 
 .paym-info {
+    position: absolute;
+    z-index: 9998;
+    align-self: center;
+    justify-self: center;
+    inset: 0;
+    width: 32%;
     margin-block: 5rem;
     background-color: white;
-    border-radius: 1rem;
-    width: 32rem;
+    border-radius: .875rem;
     padding: 1.5rem 1rem 3.5rem;
     gap: 1.75rem;
 
