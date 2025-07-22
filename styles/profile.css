@@ -430,3 +430,57 @@ main {
 
     }
 }
+
+@media screen and (max-width: 768px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
+
+        aside,
+        button {
+            width: 100%;
+        }
+
+        section {
+
+            .account-2,
+            .account-3 {
+
+                .grid-details,
+                .ch-pass-grid {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+            .history-wrapper {
+                .history {
+                    .history-b {
+                        gap: .875rem;
+                        flex-direction: column;
+                        .btn {
+                            flex-direction: column;
+                        }
+                        a {
+                            align-self: center;
+                        }
+                    }
+                    button {
+                        width: 100%;
+                    }
+                    .paym-info {
+                        .ticket-card {
+                            flex-direction: column;
+                            align-items: flex-start;
+                            .grid-detail {
+                                align-self: center;
+                            }
+                            > div:last-child {
+                                align-self: flex-end;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
