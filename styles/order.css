@@ -74,7 +74,11 @@ body>main {
                 padding: .375rem 1.25rem;
                 border-radius: 4px;
                 background-color: var(--blue);
-                color: white;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
             }
         }
 
@@ -250,6 +254,7 @@ body>main {
             border: none;
             background-color: var(--blue);
             border-radius: 4px;
+
             a {
                 color: white;
                 text-decoration: none;
@@ -269,4 +274,41 @@ body>main {
         padding: 1.75rem 1rem;
     }
 
+}
+
+@media screen and (max-width: 768px) {
+    main.bg-gray {
+        padding-inline: 1.5rem;
+        flex-direction: column;
+        .steps {
+            display: none;
+        }
+        .flex-container {
+            flex-direction: column;
+            main {
+                padding: 1rem;
+            }
+            .sman-thumb {
+                width: 100%;
+                height: 56vh;
+                background-position-y: -8px;
+            }
+            .movie-detail {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                .detail {
+                    .genre {
+                        align-self: center;
+                    }
+                }
+                button {
+                    align-self: center;
+                }
+            }
+            .seats {
+                justify-content: space-between;
+            }
+        }
+    }
 }
