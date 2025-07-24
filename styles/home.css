@@ -308,7 +308,6 @@ section#newsletter {
     }
 }
 
-
 @media screen and (max-width: 768px) {
     section#hero {
         flex-direction: column;

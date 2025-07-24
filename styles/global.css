@@ -135,6 +135,7 @@ main {
 
 header nav {
     justify-content: space-between;
+    position: relative;
 
     .center {
         gap: 3.5rem;
@@ -168,6 +169,12 @@ header nav {
     }
 
     .burger {
+        display: none;
+        position: absolute;
+        right: 0;
+    }
+
+    .menu {
         display: none;
     }
 }
@@ -243,10 +250,9 @@ footer {
 }
 
 .steps {
-    gap: 8px;
+    justify-content: space-between;
 
     .step {
-        width: max-content;
         gap: 8px;
 
         .dot {
@@ -331,6 +337,21 @@ button:not([disabled]):hover {
             &:hover {
                 cursor: pointer;
                 opacity: .6;
+            }
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            text-align: end;
+            right: 0;
+            top: 2.5rem;
+            gap: .75rem;
+            padding: .5rem;
+            background-color: white;
+
+            a {
+                color: var(--blue);
             }
         }
     }
