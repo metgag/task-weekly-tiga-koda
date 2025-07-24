@@ -1,74 +1,68 @@
 body {
-    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("/assets/images/avenger-bg.png");
+    background: linear-gradient(rgba(0, 0, 0, 0.6)), url("/assets/images/avenger-bg.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 42%;
     height: 100vh;
-    font-size: 16px;
-    padding-top: 36px;
+    padding-top: 1.5rem;
 }
 
 .card {
-    width: 340px;
-    height: 432px;
+    height: 70vh;
+    width: 384px;
     background-color: white;
-    padding: 32px 42px;
     border-radius: 6px;
     justify-content: space-between;
+    padding: 2rem;
+
+    .title {
+        h2 {
+            color: #121212;
+        }
+        p {
+            color: #A0A3BD;
+            font-size: .875rem;
+        }
+    }
 }
 
 form {
     gap: 8px;
 
-    label:not(label[for="terms"]) {
-        font-size: 14px;
+    label {
+        font-size: .875rem;
         font-weight: 600;
     }
 
     input {
+        margin-top: .5rem;
         color: var(--gray-tertiary);
-        width: 240px;
-        margin-top: 8px;
         background-color: #FCFDFE;
         border: 1px solid #DEDEDE;
-        height: 32px;
+        height: 2.5rem;
         padding-left: 12px;
+    }
+
+    a {
+        align-self: flex-end;
+        text-decoration: none;
+        color: var(--blue);
+        font-size: .875rem;
     }
 
     button {
         background-color: #1D4ED8;
         border: none;
         border-radius: 2px;
-        padding: 8px 0;
+        padding: .875rem 0;
+        color: #F7F7FC;
         font-weight: 700;
-        
-        a {
-            color: #F7F7FC;
-            text-decoration: none;
-        }
     }
-}
-
-.forgot-pw {
-    text-align: right;
-}
-
-.forgot-pw a {
-    text-decoration: none;
 }
 
 button.font-primary {
     font-size: 12px;
     letter-spacing: 0.45px;
-}
-
-#already {
-    font-weight: 500;
-    font-size: 14px;
-
-    a {
-        color: var(--blue);
-    }
 }
 
 #or {
@@ -79,12 +73,10 @@ button.font-primary {
 
     .x-line {
         text-decoration: underline;
-        content: none;
     }
 }
 
 #social {
-    width: 228px;
     justify-content: space-between;
 
     button {
@@ -94,6 +86,8 @@ button.font-primary {
         background-color: white;
         border-radius: 4px;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        width: 8rem;
+        justify-content: center;
 
         p {
             color: #A0A3BD;
@@ -103,5 +97,19 @@ button.font-primary {
 
     img {
         width: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: .75rem;
+
+        main {
+            .card {
+                height: 100%;
+                width: 320px;
+                padding: 1rem;
+            }
+        }
     }
 }

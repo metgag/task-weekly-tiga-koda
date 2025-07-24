@@ -4,18 +4,40 @@ body {
     background-repeat: no-repeat;
     background-position-y: 42%;
     height: 100vh;
-    font-size: 16px;
-    padding-top: 36px;
+    padding-top: 1.5rem;
 }
 
 .card {
-    height: 432px;
+    height: 70vh;
+    width: 384px;
     background-color: white;
-    width: auto;
-    /* padding: 32px 42px; */
     border-radius: 6px;
-    justify-content: space-around;
-    padding: .5rem 2rem 1rem;
+    justify-content: space-between;
+    padding: 2rem;
+
+    form.reg {
+        .pwd {
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+
+            input {
+                width: 100%;
+            }
+
+            i {
+                position: absolute;
+                right: 0;
+                padding-right: .875rem;
+                transform: translateY(-75%);
+                color: var(--gray-tertiary);
+                &:hover {
+                    cursor: pointer;
+                    opacity: .6;
+                }
+            }
+        }
+    }
 }
 
 .steps .step-1 .dot {
@@ -24,21 +46,18 @@ body {
 
 form {
     gap: 8px;
-    div {
-        width: inherit;
-    }
 
     label:not(label[for="terms"]) {
-        font-size: 14px;
+        font-size: .875rem;
         font-weight: 600;
     }
 
     input:not(#terms) {
-        margin-top: 8px;
+        margin-top: .5rem;
         color: var(--gray-tertiary);
         background-color: #FCFDFE;
         border: 1px solid #DEDEDE;
-        height: 32px;
+        height: 2.5rem;
         padding-left: 12px;
     }
 
@@ -46,7 +65,7 @@ form {
         background-color: #1D4ED8;
         border: none;
         border-radius: 2px;
-        padding: 8px 0;
+        padding: .875rem 0;
         color: #F7F7FC;
         font-weight: 700;
     }
@@ -58,7 +77,6 @@ input[type="checkbox"] {
 }
 
 label[for="terms"] {
-    letter-spacing: 0.75px;
     font-size: 14px;
     color: #696F79;
 }
@@ -99,6 +117,8 @@ button.font-primary {
         background-color: white;
         border-radius: 4px;
         box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        width: 8rem;
+        justify-content: center;
 
         p {
             color: #A0A3BD;
@@ -108,5 +128,19 @@ button.font-primary {
 
     img {
         width: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-top: .75rem;
+
+        main {
+            .card {
+                height: 100%;
+                width: 320px;
+                padding: 1rem;
+            }
+        }
     }
 }

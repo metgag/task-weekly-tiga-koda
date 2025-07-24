@@ -145,10 +145,42 @@ header nav {
         }
     }
 
-    .account button {
-        border: none;
-        border-radius: 4px;
-        padding: .625rem .75rem;
+    .account {
+        position: relative;
+        gap: .625rem;
+        button {
+            border: none;
+            border-radius: 4px;
+            padding: .625rem .75rem;
+        }
+        #profile-pic {
+            display: none;
+            padding: 0;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: url("/assets/images/profile-pic.png");
+            background-size: cover;
+            background-position-x: -.5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .lgOut {
+            display: none;
+            position: absolute;
+            background-color: var(--blue);
+            right: 0;
+            top: 2.5rem;
+            color: white;
+            padding: .325rem;
+            font-weight: 700;
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 
     .account button:nth-child(1) {
