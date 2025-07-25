@@ -15,7 +15,7 @@ regForm.addEventListener("submit", (e) => {
 
     for (let input of regInput) {
         if (input.id === "email") {
-            const re = /\w+.*@[a-z]{5,}.com/g;
+            const re = /^[\w-.]+@[a-z]{5,}.com$/;
             // field email tidak boleh kosong
             if (input.value === null || input.value === "") {
                 showErr("Field email tidak boleh kosong", `#err${input.id}`);
