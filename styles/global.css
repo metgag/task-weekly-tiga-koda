@@ -181,8 +181,9 @@ header nav {
         }
     }
 
-    #log-out {
+    .manage-usr {
         display: none;
+        text-align: end;
         background-color: white;
         color: #0F172A;
         font-weight: 500;
@@ -190,9 +191,11 @@ header nav {
         right: 0;
         top: 3rem;
         padding: .325rem;
-
-        &:hover {
-            cursor: pointer;
+        div {
+            &:hover {
+                cursor: pointer;
+                opacity: .6;
+            }
         }
     }
 
