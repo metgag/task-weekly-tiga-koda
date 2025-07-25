@@ -332,35 +332,6 @@ button:not([disabled]):hover {
     opacity: .75;
 }
 
-/* .step {
-    width: 240px;
-    justify-content: space-between;
-
-    .y-step:first-child .dot {
-        background-color: var(--blue);
-    }
-
-    .dot {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        color: white;
-        background-color: #A0A3BD;
-        width: 32px;
-        height: 32px;
-    }
-
-    .dash-line {
-        transform: rotate(90deg);
-        border-inline: 1px dashed #A0A3BD;
-    }
-
-    div+p {
-        font-size: 12px;
-    }
-} */
-
 @media screen and (max-width: 768px) {
     header {
         padding-inline: 1.5rem;
@@ -379,8 +350,10 @@ button:not([disabled]):hover {
             display: none;
         }
 
-        #profile-pic,
-        #log-out {
+        .manage-usr {
+            transform: translateX(-30%);
+        }
+        #profile-pic {
             transform: translateX(-80%);
         }
 
@@ -398,13 +371,16 @@ button:not([disabled]):hover {
             position: absolute;
             text-align: end;
             right: 0;
-            top: 2.5rem;
+            top: 3rem;
             gap: .75rem;
             padding: .5rem;
             background-color: white;
-
+            
             a {
-                color: var(--blue);
+                color: #0F172A; 
+                &:hover {
+                    opacity: .6;
+                }
             }
         }
     }
