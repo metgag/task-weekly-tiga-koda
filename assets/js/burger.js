@@ -15,15 +15,15 @@ burgerBtn.addEventListener("click", () => {
 });
 
 const lclUser = localStorage.getItem("email");
-const authBtn = document.querySelectorAll(".account button");
-const avatar = document.querySelector("nav .account #profile-pic");
-const logOut = document.querySelector("header nav .account #log-out");
+const authBtn = document.querySelector(".account");
+const avatar = document.querySelector("header nav #profile-pic");
+const logOut = document.querySelector("header nav #log-out");
+const authMd = document.querySelector("header nav .menu .profile");
 
 if (lclUser) {
+    authBtn.style.display = "none";
     avatar.style.display = "block";
-    for (let btn of authBtn) {
-        btn.style.display = "none";
-    }
+    authMd.style.display = "none";
 
     avatar.addEventListener("click", function() {
         if (logOut.style.display === "none") {

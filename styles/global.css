@@ -148,38 +148,41 @@ header nav {
     .account {
         position: relative;
         gap: .625rem;
+
         button {
             border: none;
             border-radius: 4px;
             padding: .625rem .75rem;
         }
-        #profile-pic {
-            display: none;
-            padding: 0;
-            border-radius: 50%;
-            width: 2.5rem;
-            height: 2.5rem;
-            background: url("/assets/images/profile-pic.png");
-            background-size: cover;
-            background-position-x: -.5rem;
+    }
 
-            &:hover {
-                cursor: pointer;
-            }
+    #profile-pic {
+        display: none;
+        padding: 0;
+        border-radius: 50%;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: url("/assets/images/profile-pic.png");
+        background-size: cover;
+        background-position-x: -.5rem;
+
+        &:hover {
+            cursor: pointer;
         }
+    }
 
-        #log-out {
-            display: none;
-            background-color: white;
-            color: #0F172A;
-            font-weight: 500;
-            position: absolute;
-            right: 0;
-            top: 2.75rem;
-            padding: .325rem;
-            &:hover {
-                cursor: pointer;
-            }
+    #log-out {
+        display: none;
+        background-color: white;
+        color: #0F172A;
+        font-weight: 500;
+        position: absolute;
+        right: 0;
+        top: 3rem;
+        padding: .325rem;
+
+        &:hover {
+            cursor: pointer;
         }
     }
 
@@ -361,6 +364,11 @@ button:not([disabled]):hover {
 
         .account {
             display: none;
+        }
+
+        #profile-pic,
+        #log-out {
+            transform: translateX(-80%);
         }
 
         .burger {
