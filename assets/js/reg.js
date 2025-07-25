@@ -1,6 +1,14 @@
 const regForm = document.querySelector("form.reg");
 const regInput = regForm.querySelectorAll("input");
 const regLabel = regForm.querySelectorAll("label");
+const lclUser = localStorage.getItem("email");
+
+if (lclUser) {
+    alert("Mengalihkan ke laman landing, harap tunggu")
+    setTimeout(() => {
+        window.location.href = "../../pages/movie/index.html";
+    }, 1500);
+}
 
 regForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -28,28 +36,28 @@ regForm.addEventListener("submit", (e) => {
             // field password tidak boleh kosong
             if (input.value === null || input.value === "") {
                 showErr("Field password tidak boleh kosong", `#err${input.id}`);
-                continue;
+                return;
             }
             // validasi password minimal 8 karakter
             if (input.value.length < 8) {
                 showErr("Password minimal 8 karakter", `#err${input.id}`);
-                continue;
+                return;
             }
             // validasi format password
             if (!re.test(input.value)) {
                 showErr("Password harus terdiri dari minimal 1 huruf besar dan kecil, dan 1 buah karakter spesial(!@#$%^&*/><)", `#err${input.id}`);
-                continue;
+                return;
             }
             showErr("", `#err${input.id}`);
         }
-        
+
         // print hasil input ke console
         if (input.type !== "checkbox") {
             console.log(input.value);
             localStorage.setItem(input.id, input.value);
         }
     }
-    
+
     alert("Akun berhasil disimpan.");
     window.location.href = "../../pages/sign/login.html";
 });

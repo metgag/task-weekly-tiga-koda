@@ -168,15 +168,15 @@ header nav {
             }
         }
 
-        .lgOut {
+        #log-out {
             display: none;
+            background-color: white;
+            color: #0F172A;
+            font-weight: 500;
             position: absolute;
-            background-color: var(--blue);
             right: 0;
-            top: 2.5rem;
-            color: white;
+            top: 2.75rem;
             padding: .325rem;
-            font-weight: 700;
             &:hover {
                 cursor: pointer;
             }
