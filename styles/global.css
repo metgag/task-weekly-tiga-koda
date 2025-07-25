@@ -149,6 +149,16 @@ header nav {
         position: relative;
         gap: .625rem;
 
+        a {
+            text-decoration: none;
+            color: #414141;
+
+            &:first-child {
+                gap: .325rem;
+                align-items: flex-end;
+            }
+        }
+
         button {
             border: none;
             border-radius: 4px;
