@@ -11,6 +11,7 @@
     </style>
     <link rel="stylesheet" href="../../styles/global.css">
     <link rel="stylesheet" href="../../styles/payment.css">
+    <script src="../../assets/js/modal.js" defer></script>
     <title>Order Payment Page</title>
 </head>
 
@@ -135,12 +136,37 @@
                                     alt=""></div>
                         </div>
                     </div>
-                    <button type="submit"><a href="pay-modal.html">Pay your
-                            order</a></button>
+                    <button type="submit">Pay your
+                        order</button>
                 </form>
             </div>
         </div>
     </main>
+
+    <div class="paym-info d-flex flex-col">
+        <h3>Payment Info</h3>
+        <div class="no-rek d-flex align-center">
+            <p>No. Rekening Virtual</p>
+            <div class="side d-flex align-center">
+                <p>12321328913829724</p>
+                <button>Copy</button>
+            </div>
+        </div>
+        <div class="total d-flex">
+            <p>Total Payment</p>
+            <h4>$30</h4>
+        </div>
+        <p>Pay this payment bill before it is due, <span>on June 23,
+                2023</span>. If the bill has not been paid by the
+            specified
+            time, it will be forfeited</p>
+            <div class="btn">
+                <button>
+                    <a href="ticket.html">Check Payment</a>
+                </button>
+                <p id="pay-later">Pay Later</p>
+            </div>
+    </div>
 
     <footer class="d-flex flex-col">
         <div class="top d-flex">

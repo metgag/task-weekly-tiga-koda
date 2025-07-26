@@ -1,3 +1,7 @@
+body {
+    position: relative;
+}
+
 .bg-gray {
     background-color: #A0A3BD33;
 }
@@ -71,6 +75,7 @@ body>main {
                 border: none;
                 border-radius: 2px;
                 font-weight: 600;
+
                 a {
                     color: white;
                     text-decoration: none;
@@ -160,6 +165,7 @@ body>main {
 
             button {
                 margin-top: 1.75rem;
+                color: white;
             }
         }
 
@@ -170,11 +176,113 @@ body>main {
     }
 }
 
+body>.paym-info {
+    display: none;
+    position: absolute;
+    z-index: 9998;
+    inset: 0;
+    width: 32%;
+    height: min-content;
+    align-self: center;
+    justify-self: center;
+    background-color: white;
+    border-radius: .875rem;
+    padding: 1.5rem 1rem;
+    gap: 1.75rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+    h3 {
+        align-self: center;
+        color: #14142B;
+    }
+
+    .no-rek,
+    .total {
+        justify-content: space-between;
+
+        >p {
+            color: #8692A6;
+            font-size: .875rem;
+        }
+    }
+
+    .side {
+        gap: .875rem;
+
+        p {
+            font-weight: 700;
+            color: #14142B;
+        }
+
+        button {
+            border: 1px solid var(--blue);
+            border-radius: 4px;
+            background-color: transparent;
+            padding: .625rem;
+            color: var(--blue);
+        }
+    }
+
+    .total {
+        h4 {
+            color: var(--blue);
+        }
+    }
+
+    >p {
+        color: #8692A6;
+        text-align: justify;
+
+        span {
+            color: #D00707;
+        }
+    }
+
+    .btn {
+        display: flex;
+        flex-direction: column;
+        gap: .625rem;
+        margin-bottom: 2rem;
+
+        button {
+            border: none;
+            background-color: var(--blue);
+
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        p#pay-later {
+            color: var(--blue);
+            border: 1px solid transparent;
+            
+            &:hover {
+                cursor: pointer;
+                border: 1px solid var(--blue);
+            }
+        }
+        
+        button,
+        p#pay-later {
+            border-radius: .25rem;
+            padding-block: .875rem;
+            text-align: center;
+            text-decoration: none;
+            width: 100%;
+            font-weight: 700;
+            font-size: .875rem;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     main {
         .steps {
             display: none;
         }
+
         .payment-card {
             width: 93%;
 
@@ -183,8 +291,10 @@ body>main {
                     .pay-method {
                         .grid-method {
                             grid-template-columns: repeat(2, 1fr);
+
                             .method {
                                 height: 12vh;
+
                                 img {
                                     width: 24%;
                                 }
